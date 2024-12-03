@@ -1,0 +1,266 @@
+/* Общие стили */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    background: #3C52E6;
+    border-bottom: 1px solid #FFFFFF;
+
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .header__left {
+    display: flex;
+    align-items: center;
+  }
+  
+
+  .header {
+    background-color: #3C52E6;
+    padding: 25px 100px ;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    top: 0;
+    z-index: 1000;
+  }
+
+  .header__menu {
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+ 
+  
+  .header_menu:hover .header_menu-line {
+    transform: scale(1.2);
+  }
+  
+  .header__logo {
+    margin-left: 15px;
+    width: 140px;
+    height: 28px;
+    top: 36px;
+    left: 232px;
+    gap: 0px;
+    opacity: 0px;
+    
+  }
+  
+  .header__link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .header__link:hover {
+    color: #ddd;
+  }
+  
+  .header__phone-wrapper {
+    display: flex;
+  }
+  
+  .header__phone {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .header__phone:hover {
+    color: #8080ff;
+  }
+
+  p {
+    width: 880px;
+    height: 144px;
+    top: 399px;
+    left: 280px;
+  }
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 400;
+
+}
+
+  h1, h2 {
+    margin-top: 0;
+  }
+
+  .text-block {
+    padding: 50px 0;
+  }
+  
+  .text-block h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  ol li {
+    font-size: 16px;
+    font-weight: 400px;
+    padding: 8px;
+    margin-right: 50px;
+  }
+  
+  .text-block h2 {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  
+  .text-block p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #e5e5e5;
+  }
+  
+  .text-block img {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 880px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+
+    padding: 70px;
+  }
+  
+  .footer {
+    background-color: #23252E;
+    padding: 40px 0;
+    color: #ffffff;
+  }
+  
+  .footer__content {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer__logo-link img {
+    display: block;
+  }
+  
+  .footer__social-list {
+    display: flex;
+    gap: 70px;
+    list-style: none;
+    padding: 0;
+    margin: 10;
+  }
+  
+  .footer__social-link {
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer__social-link:hover {
+    transform: scale(1.1);
+  }
+  
+  .footer__social-link img {
+    display: block;
+  }
+  
+  .footer__nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+  }
+  
+  .footer__nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+  }
+  
+  .footer__nav-link:hover {
+    color: #0000ff;
+  }
+  
+  /* Медиазапросы */
+  @media (max-width: 768px) {
+    .header__content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .footer__content {
+      flex-direction: column;
+      align-items: center;
+
+      
+    }
+  
+    .footer__nav-list {
+      justify-content: center;
+    }
+  }
+  /* скрываем чекбокс */
+#menu__toggle {
+    opacity: 0;
+  }
+  /* стилизуем кнопку */
+  .menu__btn {
+    display: flex; /* используем flex для центрирования содержимого */
+    align-items: center;  /* центрируем содержимое кнопки */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  /* добавляем "гамбургер" */
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+
